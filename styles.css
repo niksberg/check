@@ -1,0 +1,179 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, white 75%, black 100%);
+    color: black;
+}
+
+p{
+    margin-left: 2px;
+}
+
+/* Navigation Bar */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);
+    padding: 10px;
+    text-align: center;
+}
+
+.info::first-letter {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.info {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.5em;
+    margin-left: 5px;
+    text-align: center;
+}
+
+#navbar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+.tools-title {
+    text-align: center;
+}
+
+#navbar a:hover {
+    color: red;
+}
+
+/* Centered Image */
+.centered-image {
+    padding-top: 40px;
+    display: block;
+    margin: 50px auto;
+    width: 30%;
+}
+
+/* Username */
+.username {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+/* Tools & Skills Grid */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    justify-content: center;
+    padding: 20px;
+    margin: 10px;
+}
+
+.tools-grid .image img {
+    width: 100px;
+    transition: transform 0.3s;
+}
+
+.tools-grid .image img:hover {
+    transform: scale(1.1);
+}
+
+/* Projects */
+#projects {
+    padding: 50px;
+    text-align: center;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.project-tile {
+    background: white;
+    padding: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    color: black;
+}
+
+.project-tile:hover {
+    background: black;
+    color: white;
+}
+
+.project-tile img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Socials */
+#socials {
+    text-align: center;
+    padding-bottom: 150px;
+}
+
+.social-icons a {
+    font-size: 40px;
+    margin: 10px;
+    color: black;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: white;
+}
+
+/* Footer */
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Section Hover Effects */
+section {
+    transition: 0.3s;
+}
+
+section:hover {
+    background: black;
+    color: white;
+}
+
+#socials:hover {
+    background: initial;
+    color: initial;
+}
+
+a{
+    color: red;
+}
