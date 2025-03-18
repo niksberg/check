@@ -1,16 +1,18 @@
-/* Global Styles */
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: linear-gradient(to bottom, white 75%, black 100%);
     color: black;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 p{
     margin-left: 2px;
 }
 
-/* Navigation Bar */
+
 #navbar {
     position: fixed;
     top: 0;
@@ -28,12 +30,23 @@ p{
 
 .info {
     font-family: "Fira Sans", sans-serif;
-    font-weight: bold;
-    font-style: italic;
+    font-weight: bold;;
     font-size: 1.5em;
     margin-left: 5px;
     text-align: center;
 }
+
+#prog {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+#prog li {
+    margin: 5px 0;
+}
+
 
 #navbar ul {
     list-style: none;
@@ -55,6 +68,7 @@ html {
 
 .tools-title {
     text-align: center;
+    padding-top: 50px;
 }
 
 #navbar a:hover {
@@ -79,16 +93,88 @@ html {
 /* Tools & Skills Grid */
 .tools-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 10px;
     justify-content: center;
+    align-items: center;
     padding: 20px;
-    margin: 10px;
+    margin: 0 auto;
+}
+.tools-grid .image {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.tools-grid .image img {
+    max-width: 100px;
+    min-width: 10px;
+    width: 25%;
+    transition: transform 0.3s;
 }
 
-.tools-grid .image img {
-    width: 100px;
-    transition: transform 0.3s;
+@media (max-width: 1200px) {
+    .tools-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .info {
+        font-size: 1.3em;
+    }
+
+    .username {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .tools-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .info {
+        font-size: 1.2em;
+    }
+
+    .username {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tools-grid .image img {
+        width: 50px;
+    }
+
+    .info {
+        font-size: 1em;
+    }
+
+    .username {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tools-grid .image img {
+        width: 50px;
+    }
+
+    .info {
+        font-size: 0.9em;
+    }
+
+    .username {
+        font-size: 1.2rem;
+    }
 }
 
 .tools-grid .image img:hover {
@@ -159,7 +245,6 @@ footer {
     margin-right: 0;
 }
 
-/* Section Hover Effects */
 section {
     transition: 0.3s;
 }
